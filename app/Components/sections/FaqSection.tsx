@@ -63,7 +63,7 @@ const FaqSection: React.FC = () => {
             {faqData.map((item, index) => (
               <article
                 key={index}
-                className={`p-8 rounded-[10px]  ${isOpen[index] ? 'bg-[#E6F6FE]' : ''}`}
+                className={`p-8 rounded-[10px]  ${isOpen[index] ? 'bg-[#E6F6FE]' : ''}  transition ease-out shadow-custom`}
               >
                 <button
                   className="flex items-center justify-between w-full"
@@ -73,7 +73,7 @@ const FaqSection: React.FC = () => {
                   <h4 className={`font-bold text-[#18181B] ${dm_sans.className} text-lg`}>{item.question}</h4>
                   </header>
 
-                  <span className="text-white bg-[#0F9FD6] rounded-md">
+                  <div className="text-white bg-[#0F9FD6] w-[45px] h-[45px] rounded-md flex justify-center items-center shadow-custom">
                     {isOpen[index] ? (
                       <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 12H6" />
@@ -83,10 +83,10 @@ const FaqSection: React.FC = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                       </svg>
                     )}
-                  </span>
+                  </div>
                 </button>
                   <main>
-                <p className={`mt-6 text-base text-[#1D1C1D] ${dm_sans.className} ${isOpen[index] ? 'block' : 'hidden'}`}>
+                <p className={`mt-6 text-base text-[#1D1C1D] ${dm_sans.className} ${isOpen[index] ? 'block' : 'hidden'} transition ease-in-out delay-75`}>
                   {item.answer}
                 </p>
                   </main>

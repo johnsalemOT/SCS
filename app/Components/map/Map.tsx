@@ -11,7 +11,7 @@ const Map = () => {
 
         const initMap = async () => {
             const loader = new Loader({
-                apiKey: "AIzaSyBQoPqSW7YeXx89Coun-FtKuF4DVV5-pNM",
+                apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY,
                 version: 'weekly',
             })
             const {Map} = await loader.importLibrary('maps');
@@ -41,7 +41,7 @@ const Map = () => {
     },[])
 
   return (
-    <div className='h-[300px] w-[503px] rounded-[10px] shadow-custom' ref={mapRef}>
+    <div className='h-[300px] w-[503px] rounded-[10px] shadow-custom border-2 border-[#25B4F8]' ref={mapRef}>
     </div>
   )
 }

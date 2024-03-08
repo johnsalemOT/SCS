@@ -33,7 +33,7 @@ const ServicesSection = () => {
      </div>
      <div className='flex flex-col justify-center items-center py-4 gap-1'>
       <h2 className={`text-[32px] text-[#0F9FD6] font-semibold ${inter.className}`}>Palliative Care</h2>
-      <p className={`${dm_sans.className} text-[#3C4959] text-base`}>Benefits of Implementing Supportive Care in a Hospital Setting</p>
+      <p className={`${dm_sans.className} text-[#3C4959] text-base pt-2`}>Benefits of Implementing Supportive Care in a Hospital Setting</p>
      </div>
       </div>
      <div className='flex flex-wrap justify-center items-center gap-16 py-8'>

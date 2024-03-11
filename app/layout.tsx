@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { url } from "inspector";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -11,6 +10,7 @@ export const metadata: Metadata = {
   robots: 'index,follow',
   applicationName:'Vital Heal Landing Page',
   generator: 'Next.js',
+  icons: '/favicon.ico',
 };
 
 
@@ -21,9 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/images/youtube" type="image/png" sizes="32x32"></link>
-      </head>
+      {/* <Head>
+        <link rel="icon" href="/favicon.ico"/>
+      </Head> */}
       <body className={inter.className}>{children}</body>
     </html>
   );

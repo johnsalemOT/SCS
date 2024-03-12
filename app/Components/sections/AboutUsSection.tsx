@@ -5,6 +5,10 @@ import StylishUnderline from '../../../public/images/stylishUnderline.png'
 import {Inter} from 'next/font/google'
 import { DM_Sans } from 'next/font/google'
 import Doctor from '../../../public/images/doctor.png'
+import Card from '../card/Card'
+import communications from '../../../public/images/communications.png'
+import patientheart from '../../../public/images/patientheart.png'
+import support from '../../../public/images/support.png'
 
 
 const poppins = Poppins({
@@ -19,20 +23,45 @@ const dm_sans = DM_Sans({
   weight:['700', '400']
 })
 
+const data  = [
+  {
+    icon: support,
+    title: 'Compassionate Expertise',
+    body: ' A team dedicated to understanding and addressing the unique challenges of chronic and critical illnesses.',
+  },
+  {
+    icon: support,
+    title: 'Patient-Centered Approach',
+    body: 'Placing the patient, their family, and the medical team at the heart of our care philosophy.',
+  },
+  {
+    icon: support,
+    title: 'Effective Communication',
+    body: 'Bridging the gap between treatment modalities, physician viewpoints, and patient outcomes.',
+  },
+]
 
 const AboutUsSection = () => {
 
   
   return (
-    <div id='about-us' className='bg-[#5E7397] py-4 my-16'>
-    <div className='bg-[#274374]  flex flex-col justify-center items-center py-10 px-52'>
-      <div className='max-w-[1200px] flex flex-col justify-center items-center gap-2'>
+    <div id='about-us' className='bg-[white] py-4 my-16'>
+    <div className='bg-[#E6F6FE]  flex flex-col  items-center py-16 px-52 h-[440px]'>
+      <div className='max-w-[1200px] flex flex-col justify-center items-center gap-1'>
         <h1 className={`text-center ${dm_sans.className} text-base text-[#25B4F8] font-bold`}>About Us</h1>
-        <h2 className={`text-center ${dm_sans.className} text-4xl text-white font-bold`}>Who We Are</h2>
-        <h2 className={`text-center ${dm_sans.className} text-4xl text-white font-bold`}>Vital Heal&apos;s Commitment to Exceptional Wound Care</h2>
-        <p className={`text-center ${dm_sans.className} font-normal text-white pt-6 pb-8 `}>At Vital Heal, we are a passionate team of healthcare professionals dedicated to revolutionizing wound care. With a focus on complicated wounds, we integrate expertise, compassion, and innovation to bring healing directly to your home. Our commitment extends beyond medical intervention; we collaborate with your entire care network to create an environment conducive to recovery.</p>
+        <p className={`text-center ${dm_sans.className} font-normal text-[#3C4959] pt-6 pb-8 `}>At Supportive Care Specialists, we redefine healthcare by merging expertise with empathy. Our consulting service is dedicated to providing palliative care for patients facing chronic and critical illnesses. We focus on managing complicated medical issues, psychosocial challenges, spiritual pain, and physical symptoms, ensuring that individuals and their families navigate their journey with care and compassion.</p>
       </div>
-
+      <h2 className={`text-4xl ${dm_sans.className} text-[#274374] font-bold pt-8`}>Why Choose Supportive Care Specialists?</h2>
+    </div>
+    <div className='flex flex-row justify-center items-center mt-[-100px] gap-8'>
+      {data.map((item)=>{
+       return(
+        <div key={item.title}>
+         <Card title={item.title} body={item.body} icon={item.icon}></Card> 
+         </div>
+         )
+      })
+      }
     </div>
 </div>
     )

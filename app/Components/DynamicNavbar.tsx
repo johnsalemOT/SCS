@@ -12,18 +12,25 @@ const DynamicNavbar: React.FC<Props> = ({ children }) => {
 
   useEffect(() => {
     const changeNavbarColor = () => {
+      console.log(window.scrollY);
       if(window.scrollY > 3100){
+        setNavbarColor('bg-white');
         setNavbarAnimation('ml-[-280px]')
       }
       else if(window.scrollY > 2200){
+        setNavbarColor('bg-white');
         setNavbarAnimation('ml-[-220px]')
       }
       else if (window.scrollY > 1250) {
+        setNavbarColor('bg-white');
         setNavbarAnimation('ml-[-160px]')
       } else if( window.scrollY > 850) {
         setNavbarColor('bg-white');
         setNavbarAnimation('ml-[-80px]')
-      } else{
+      }else if(window.scrollY > 150){
+        setNavbarColor('bg-white');
+        setNavbarAnimation('ml-0')
+      }else{
         setNavbarColor('bg-transparent');
         setNavbarAnimation('ml-0')
       }

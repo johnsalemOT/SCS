@@ -32,8 +32,8 @@ const ServicesSection = () => {
        <Image src={StylishUnderline} alt='Sytlish Underline' className='-mt-1'></Image>
      </div>
      <div className='flex flex-col justify-center items-center py-4 gap-1'>
-      <h2 className={`text-[32px] text-[#274374] font-semibold ${inter.className} text-center`}>Comprehensive Wound Care Services Wherever Home May Be</h2>
-      <p className={`${dm_sans.className} text-[#274374] text-base pt-2 text-center`}>At Vital Heal, we specialize in physician-led wound care services, addressing complicated wounds in various home settings, including assisted living, boarding care, and nursing homes. Our dedicated team collaborates with PCP teams, discharge planners, case managers, and families to optimize the wound care environment and provide tailored solutions for the best possible healing outcomes.</p>
+      <h2 className={`text-[32px] text-[#274374] font-semibold ${inter.className} text-center`}>Comprehensive Palliative Care Tailored to You</h2>
+      <p className={`${dm_sans.className} text-[#274374] text-base pt-2 text-center`}>Explore the features of our services through these key areas:</p>
      </div>
       </div>
      <div className='flex flex-wrap justify-center items-center gap-8 py-12 '>

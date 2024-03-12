@@ -49,7 +49,7 @@ const ContactUsSection = () => {
           ></Image>
         </div>
         <div className="flex flex-col justify-center items-center py-8 gap-4">
-          <h2 className={`${dm_sans.className} font-bold text-[32px] text-[#274374]`}>Get in Touch - Your Journey to Healing Starts Here</h2>
+          <h2 className={`${dm_sans.className} font-bold text-[32px] text-[#274374]`}>Connect with Supportive Care Specialists</h2>
           <h6 className={`${inter.className} text-[#3C4959] text-lg`}>
           Have questions or ready to embark on your healing journey? Fill out the form below, and one of our caring team members will reach out to you shortly.
           </h6>

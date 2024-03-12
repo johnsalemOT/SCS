@@ -1,52 +1,67 @@
 import React from "react";
 
-import Card from "./Card";
-import heartcare from '../../../public/images/heartcare.png'
-import plant from '../../../public/images/plant.png'
-import collaboration from '../../../public/images/collaboration.png'
-import support from '../../../public/images/support.png'
-import home from '../../../public/images/home.png'
-
+import LabelCard from "./LabelCard";
+import management from "../../../public/images/management.png";
+import psychosocial from "../../../public/images/psychosocial.png";
+import spiritual from "../../../public/images/collaboration.png";
+import pain from "../../../public/images/pain.png";
+import communications from "../../../public/images/communications.png";
+import inpatient from "../../../public/images/inpatient.png";
 
 const data = [
   {
-      icon : heartcare,
-      title : "Physician-Led Wound Care",
-      body : "Our team of dedicated physicians provides comprehensive wound care services, addressing even the most complex cases to promote healing and enhance quality of life."
+    icon: management,
+    title: "Medical Management",
+    bullet1: "Expert management of complex medical issues.",
+    bullet2: "Personalized treatment plans to address individual needs.",
   },
   {
-      icon: collaboration,
-      title : "Collaboration with PCP Teams ",
-      body : "We work hand-in-hand with your primary care physician (PCP) team to optimize your wound care environment, including dietary supplements and lifestyle recommendations, ensuring the best possible outcomes."
+    icon: psychosocial,
+    title: "Psychosocial Support",
+    bullet1: "Compassionate care for emotional and social concerns.",
+    bullet2: "Therapeutic interventions to enhance overall well-being.",
   },
   {
-      icon: support,
-      title : "Supportive Services",
-    body : "From discharge planning to case management, our team coordinates with healthcare professionals and family members to deliver personalized, holistic care that meets your unique needs."
+    icon: spiritual,
+    title: "Spiritual Care",
+    bullet1: "Holistic support to address spiritual pain.",
+    bullet2: "Tailored approaches to respect individual beliefs.",
   },
   {
-      icon: home,
-      title : "Guidance for Families",
-      body : "Our team supports and educates families, empowering them to contribute to the healing process effectively."
+    icon: pain,
+    title: "Pain Management",
+    bullet1: "Dedicated focus on alleviating physical pain and discomfort.",
+    bullet2: "Multi-disciplinary strategies for optimal pain relief.",
   },
   {
-      icon: plant,
-      title : "Nutritional Optimization",
-      body : "We idealize supplements and diets to enhance your overall health, maximizing the potential for recovery."
-  }
-]
-
+    icon: communications,
+    title: "Communication Facilitation",
+    bullet1: "Closing the loop of confusion in treatment options",
+    bullet2: "Ensuring clear understanding among patients, families, and medical teams",
+  },
+  {
+    icon: inpatient,
+    title: "Inpatient and Outpatient Services",
+    bullet1: "Providing support both within the hospital and outPatient.",
+    bullet2: "Collaborating with PCP teams for better outcomes in the hospital.",
+  },
+];
 
 const CardMapOver = () => {
-
-
-  return <>
-    {data.map((item, index) => (
-      <div key={index} className="flex ">
-            <Card icon={item.icon} title={item.title} body={item.body}></Card>
-      </div>
-    ))}
-  </>;
+  return (
+    <>
+      {data.map((item, index) => (
+        <div key={index} className="flex ">
+          <LabelCard
+            icon={item.icon}
+            title={item.title}
+            bullet1={item.bullet1}
+            bullet2={item.bullet2}
+          ></LabelCard>
+        </div>
+      ))}
+    </>
+  );
 };
 
 export default CardMapOver;

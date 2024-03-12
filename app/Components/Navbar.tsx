@@ -34,13 +34,13 @@ const Navbar = () => {
           <div className={kumbh_sans.className}>
             <ul className=" flex flex-wrap items-center text-base justify-center z-10">
               <li>
-              <Link className="mr-10 text-[#454245]" href={"#services"}>
-                Services
+              <Link className="mr-10 text-[#454245]" href={"#about-us"}>
+                About Us
               </Link>
               </li>
               <li>
-              <Link className="mr-10 text-[#454245]" href={"#about-us"}>
-                About Us
+              <Link className="mr-10 text-[#454245]" href={"#services"}>
+                Services
               </Link>
               </li>
               <li>

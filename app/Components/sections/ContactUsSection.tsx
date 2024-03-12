@@ -1,6 +1,6 @@
 import React from "react";
 import StylishUnderline from "../../../public/images/stylishUnderline.png";
-import { Poppins } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import Image from "next/image";
 import ContactDetailCard from "../card/ContactDetailCard";
 import { Inter } from "next/font/google";
@@ -9,11 +9,12 @@ import Pin from '../../../public/images/pin.png';
 import Email from '../../../public/images/email.png';
 import Map from "../map/Map";
 import ContactUsForm from "../Form/ContactUsForm";
+import contactus from '../../../public/images/contactus.svg'
 
 
-const poppins = Poppins({
+const dm_sans = DM_Sans({
   subsets: ["latin"],
-  weight: ["500", "400"],
+  weight: ["500", "400", '700'],
 });
 
 
@@ -33,22 +34,24 @@ const ContactUsSection = () => {
 
   return (
     <section id="contact-us" className="h-screen p-8 flex flex-col items-center">
-      <div>
+      <div className='relative'>
+        <Image src={contactus} alt='decor' className='absolute left-[-200px] top-[40px]'></Image>
         <div className="flex flex-col justify-center items-center">
-          <h2
-            className={`${poppins.className} font-normal text-[22px] text-[#011632`}
+          <h1
+            className={`${dm_sans.className} font-bold text-base text-[#25B4F8]`}
           >
             Contact Us
-          </h2>
+          </h1>
           <Image
             src={StylishUnderline}
             alt="Sytlish Underline"
             className="-mt-1"
           ></Image>
         </div>
-        <div className="flex flex-col justify-center items-center py-8 gap-1">
+        <div className="flex flex-col justify-center items-center py-8 gap-4">
+          <h2 className={`${dm_sans.className} font-bold text-[32px] text-[#274374]`}>Get in Touch - Your Journey to Healing Starts Here</h2>
           <h6 className={`${inter.className} text-[#3C4959] text-lg`}>
-            Book an Appointment to treat your teeth right now.
+          Have questions or ready to embark on your healing journey? Fill out the form below, and one of our caring team members will reach out to you shortly.
           </h6>
         </div>
       </div>

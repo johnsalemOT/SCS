@@ -65,7 +65,7 @@ const Footer = () => {
               </span>
             </a>
           </div>
-          <div className="flex flex-row">
+          <div className="flex flex-row justify-between items-center gap-16">
             <p className={`text-[#0A142F] ${jost.className} text-sm`}>Terms of Service</p>
             <p className={`text-[#0A142F] ${jost.className} text-sm`}>Privacy Policy</p>
           </div>

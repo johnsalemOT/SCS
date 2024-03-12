@@ -8,16 +8,26 @@ interface Props {
 
 const DynamicNavbar: React.FC<Props> = ({ children }) => {
   const [navbarColor, setNavbarColor] = useState('bg-transparent');
+  const [navbarAnimation, setNavbarAnimation] = useState('ml-0')
 
   useEffect(() => {
     const changeNavbarColor = () => {
-      if (window.scrollY > 900) {
+      if(window.scrollY > 3100){
+        setNavbarAnimation('ml-[-280px]')
+      }
+      else if(window.scrollY > 2200){
+        setNavbarAnimation('ml-[-220px]')
+      }
+      else if (window.scrollY > 1250) {
+        setNavbarAnimation('ml-[-160px]')
+      } else if( window.scrollY > 850) {
         setNavbarColor('bg-white');
-      } else {
+        setNavbarAnimation('ml-[-80px]')
+      } else{
         setNavbarColor('bg-transparent');
+        setNavbarAnimation('ml-0')
       }
     };
-
     window.addEventListener('scroll', changeNavbarColor);
     return () => {
       window.removeEventListener('scroll', changeNavbarColor);
@@ -25,7 +35,7 @@ const DynamicNavbar: React.FC<Props> = ({ children }) => {
   }, []);
 
   return (
-    <nav className={`sticky top-0 ${navbarColor} transition delay-0 ease-in-out z-50`}>
+    <nav className={`sticky top-0 ${navbarColor} ${navbarAnimation} transition-all duration-500 delay-75 ease z-50`}>
       {children}
     </nav>
   );

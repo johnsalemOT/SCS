@@ -37,7 +37,7 @@ const ContactUsForm = () => {
               <div className="flex flex-col ">
                 <label
                   htmlFor="firstName"
-                  className={`leading-8 text-base text-gray-600 ${inter.className}`}
+                  className={`leading-10 text-base text-gray-600 ${inter.className}`}
                 >
                   First Name
                 </label>
@@ -51,7 +51,7 @@ const ContactUsForm = () => {
               <div className="flex flex-col">
                 <label
                   htmlFor="lastName"
-                  className={`leading-8 text-base text-gray-600 ${inter.className}`}
+                  className={`leading-10 text-base text-gray-600 ${inter.className}`}
                 >
                   Last Name
                 </label>
@@ -66,7 +66,7 @@ const ContactUsForm = () => {
             <div className="w-full flex flex-col pt-1">
               <label
                 htmlFor="email"
-                className={`leading-8 text-base text-gray-600 ${inter.className}`}
+                className={`leading-10 text-base text-gray-600 ${inter.className}`}
               >
                 Email
               </label>
@@ -81,12 +81,12 @@ const ContactUsForm = () => {
             <div>
               <label
                 htmlFor="phoneNumber"
-                className={`leading-8 text-base text-gray-600 ${inter.className}`}
+                className={`leading-10 text-base text-gray-600 ${inter.className}`}
               >
                 Phone Number
               </label>
-              <div className="w-full gap-2 flex flex-row bg-white rounded-[10px] border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                <Field component="select" name="countryCode">
+              <div className="w-full gap-2 flex flex-row bg-white rounded-[10px] border border-gray-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <Field component="select" name="countryCode" className='border-0 border-transparent w-18 focus-visible:border-0 active:border-0 focus-visible:border-transparent'>
                   <option>US</option>
                   <option>UK</option>
                   <option>EU</option>
@@ -98,13 +98,13 @@ const ContactUsForm = () => {
                   type="text"
                   component="input"
                   placeholder="+1 (555) 000-0000"
-                  className="w-full"
-                />
+                  className="w-full bg-white rounded-[10px] border border-transparent text-base outline-none text-gray-700 py-1 px-2 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                ></Field>
               </div>
               <div className="flex flex-col mb-4 pt-2">
                 <label
                   htmlFor="message"
-                  className={`leading-8 text-base text-gray-600 ${inter.className}`}
+                  className={`leading-10 text-base text-gray-600 ${inter.className}`}
                 >
                   Message
                 </label>

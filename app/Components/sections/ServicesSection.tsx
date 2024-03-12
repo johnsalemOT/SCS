@@ -14,7 +14,7 @@ const poppins = Poppins({
 })
 const dm_sans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '700'],
 })
 const inter = Inter ({
   subsets: ['latin'],
@@ -25,18 +25,18 @@ export const metadata: Metadata = {
 
 const ServicesSection = () => {
   return (
-    <section id='services' className='h-screen px-24 py-10 flex flex-col items-center'>
-      <div>
+    <section id='services' className='h-full px-24 py-10 flex flex-col items-center'>
+      <div className='max-w-[1200px]'>
      <div className='flex flex-col justify-center items-center'>
-       <h1 className={`${poppins.className} font-normal text-[22px]  text-[#011632`}>Services</h1>
+       <h1 className={`${dm_sans.className} font-bold text-base text-[#0F9FD6]`}>Services</h1>
        <Image src={StylishUnderline} alt='Sytlish Underline' className='-mt-1'></Image>
      </div>
      <div className='flex flex-col justify-center items-center py-4 gap-1'>
-      <h2 className={`text-[32px] text-[#0F9FD6] font-semibold ${inter.className}`}>Palliative Care</h2>
-      <p className={`${dm_sans.className} text-[#3C4959] text-base pt-2`}>Benefits of Implementing Supportive Care in a Hospital Setting</p>
+      <h2 className={`text-[32px] text-[#274374] font-semibold ${inter.className} text-center`}>Comprehensive Wound Care Services Wherever Home May Be</h2>
+      <p className={`${dm_sans.className} text-[#274374] text-base pt-2 text-center`}>At Vital Heal, we specialize in physician-led wound care services, addressing complicated wounds in various home settings, including assisted living, boarding care, and nursing homes. Our dedicated team collaborates with PCP teams, discharge planners, case managers, and families to optimize the wound care environment and provide tailored solutions for the best possible healing outcomes.</p>
      </div>
       </div>
-     <div className='flex flex-wrap justify-center items-center gap-16 py-8'>
+     <div className='flex flex-wrap justify-center items-center gap-8 py-12 '>
       <CardMapOver />
      </div>
     </section>

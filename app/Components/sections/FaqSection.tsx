@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { DM_Sans } from 'next/font/google';
+import StylishUnderline from '../../../public/images/stylishUnderline.png'
+import Image from 'next/image';
 
 const dm_sans = DM_Sans({
   subsets: ['latin'],
@@ -14,17 +16,17 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: 'Why is Webflow the best nocode tool?',
+    question: 'What types of wounds do you specialize in?',
+    answer:
+      'We specialize in complicated wounds, working closely with physicians for tailored solutions',
+  },
+  {
+    question: 'How do you collaborate with families in the healing process?',
     answer:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?',
   },
   {
-    question: 'Why is Webflow the best nocode tool?',
-    answer:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?',
-  },
-  {
-    question: 'Why is Webflow the best nocode tool?',
+    question: 'What home settings do you operate in?',
     answer:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?',
   },
@@ -56,14 +58,17 @@ const FaqSection: React.FC = () => {
     <section id='more'>
       <div className="bg-white">
         <div className="container px-6 py-12 mx-auto">
-            <h6 className='text-lg font-semibold text-[#2AA7FF] p-1 text-center'>More</h6>
+        <div className='flex flex-col justify-center items-center py-4'>
+       <h1 className={`${dm_sans.className} font-bold text-base text-[#0F9FD6]`}>More</h1>
+       <Image src={StylishUnderline} alt='Sytlish Underline' className='-mt-1'></Image>
+     </div>
           <h2 className="text-2xl font-semibold text-[#1B3C74] lg:text-3xl text-center">Frequently asked questions</h2>
 
           <div className="mt-8 space-y-8 lg:mt-12">
             {faqData.map((item, index) => (
               <article
                 key={index}
-                className={`p-8 rounded-[10px]  ${isOpen[index] ? 'bg-[#E6F6FE]' : ''}  transition ease-out shadow-custom`}
+                className={`p-8 rounded-[10px]  ${isOpen[index] ? 'bg-[#E6F6FE]' : ''}  transition-colors duration-500 ease shadow-custom`}
               >
                 <button
                   className="flex items-center justify-between w-full"
@@ -86,7 +91,7 @@ const FaqSection: React.FC = () => {
                   </div>
                 </button>
                   <main>
-                <p className={`mt-6 text-base text-[#1D1C1D] ${dm_sans.className} ${isOpen[index] ? 'block' : 'hidden'} transition ease-in-out delay-75`}>
+                <p className={` transition-all mt-6 text-base text-[#1D1C1D] ${dm_sans.className} ${isOpen[index] ? 'block' : 'hidden'} duration-1000 ease`}>
                   {item.answer}
                 </p>
                   </main>
